@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <settings>
+    
+    <!-- czas "uśpienia", co tyle milisekund będą odczytywane dane z Falcon'a -->
+    <interval>50</interval>
+    
+    <!-- format odczytywanych danych (wersja Falcon'a)
+      możliwe wartości:
+        OpenFalcon
+        AlliedForce
+        BMS2
+        BMS3
+        BMS4
+    -->
+    <dataFormat>AlliedForce</dataFormat>
+    
+  </settings>
+</configuration>

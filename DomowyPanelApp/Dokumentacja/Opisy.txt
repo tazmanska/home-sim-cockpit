@@ -1,0 +1,3 @@
+﻿DataViaNetwork
+
+Dzisiaj udostępniam kolejny moduł - <em>DataViaNetwork</em>, do pobrania na stronie <em>pliki</em>. Moduł umożliwia przesyłanie zmiennych (wartości) pomiędzy komputerami na których uruchomiona jest aplikacja HomeSimCockpit.

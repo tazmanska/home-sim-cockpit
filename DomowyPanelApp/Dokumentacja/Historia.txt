@@ -1,0 +1,98 @@
+﻿Historia zmian aplikacji HomeSimCockpit
+==========================================================
+
+Legenda:
+ - usunięto
+ + dodano
+ * zmieniono
+ 
+1.1.1.2 (01.09.2011):
+ * poprawiona i rozszerzona obsługa modułów
+ 
+simOUT : 1.0.0.3 (01.09.2011):
+ + dodana obsługa simIN
+ 
+GameControllers : 1.0.0.3 (30.10.2010):
+ * poprawiono odczytywanie stanów z kontrolerów
+ * poprawiono wyszukiwanie kontrolerów
+ 
+1.1.1.1 (20.10.2010):
+ * poprawiona obsługa zmiany języka interfejsu aplikacji
+ + dodana funkcja wbudowana Stop() - zatrzymuje wykonywanie skryptu, można podać string jako argument
+ 
+simOUT : 1.0.0.2 (16.10.2010):
+ * zablokowana ilość (40 lub 48) diod w okienku dodawania sterownika diod LED
+ * zablokowana ilość (5 lub 6) wyświetlaczy 7-SEG w okienku dodawania sterowniku wyświetlaczy 7-SEG
+ * poprawiona obsługa wyświetlaczy 7-SEG
+ 
+1.1.1.0 (01.09.2010):
+ + dodano automatyczne aktualizacje programu przez Internet
+ + rozszerzono mechanizm łączenia skryptów (łączone są również zdarzenia zmiany zmiennych, ignorowane są powtórzone deklaracje tych samych zmiennych)
+
+1.1.0.0 (05.08.2010):
+ + lista 10 ostatnio otwartych plików ze skryptami
+ + dodano opcję wybierania priorytetu z jakim ma działać aplikacja
+ + dodano opcję wybierania procesorów na któych ma działać aplikacja
+ * poprawiony błąd występujący gdy skrypt ma nazwę dłuższą niż 43 znaki
+ * poprawiony błąd wczytywania skryptu gdy po ostatnim skrypcie w pliku występowały jakieś (białe) znaki
+ + dodano opcję łączenia skryptów w jeden skrypt (instrukcja include)
+ * zmiana nazwy aplikacji z DomowyKokpit na HomeSimCockpit
+ + dodano funkcje Trim(...), TrimStart(...) i TrimEnd(...)
+ + dodano funkcję GetID(...) zwracającą identyfikator zmiennej
+ + rozbudowanie menu kontekstowego aplikacji zminimalizowanej do zasobnika systemowego
+ + obsługa języka angielskiego i polskiego
+ + dodana funkcja Sleep(ms)
+ 
+1.0.2.6 (09.01.2010):
+ + sortowanie listy wczytanych skryptów
+ + dodane menu kontekstowe pola Log, umożliwia wyczyszczenie, skopiowanie i zapisanie do pliku jego zawartości
+ * poprawki wewnętrzne (poprawienie błędów + optymalizacja)
+ 
+1.0.2.5 (28.11.2009): 
+ + dodana funkcja GetDateTime(<format>)
+ + zmiana ikonki programu gdy skrypt jest uruchomiony
+ + dodano menu kontekstowe do ikonki w zasobniku systemowym
+ + dodano przycisk do ponownego odczytania skryptów ze wskazanego pliku
+ + możliwość uruchamiania aplikacji w trybie wsadowym, 
+   parametry: /m - minimalizuj aplikację po starcie, /file:"<ścieżka-do-pliku>" - wczytanie wskazanego pliku ze skryptami, /script:"<nazwa-skryptu>" - uruchomienie skryptu o podanej nazwie
+   przykład: DomowyKokpit.exe /m /file:"c:\skrypty\skrypt_mcp.hcps" /script:"MCP"
+ + dodano opcję kopiowania deklaracji zmiennej w jednym wierszu
+ * tworzenie deklaracji zmiennej poprawia nazwę zmiennej tak by była poprawna
+ 
+1.0.2.4 (05.11.2009):
+ * obsługa błędów przy wywołaniu konfiguracji modułów 
+ + wykrywanie definicji zmiennych z tego samego modułu o tej samej zmiennej
+ + dodana obsługa pomocy użytkownika w modułach
+ + dodane menu kontekstowe do listy zmiennych (wejściowych i wyjściowych) z poleceniem skopiowania do schowka deklaracji wybranej zmiennej
+ + dodana funkcja MakeDouble(high, low) tworząca z liczb typu int liczbę double ale tworzy ją wg. bitów a nie wartości
+ + minimalizacja aplikacji "chowa" ją do zasobnika systemowego
+ + zmiana kontrolki wyświetlającej listy zmiennych i funkcji modułu, możliwość sortowania
+ + obok napisów "Zmienne modułu" i "Funkcje modułu" dodano informację o ilości zmiennych/funkcji
+ + dodane menu kontekstowe do listy funkcji (wejściowych i wyjściowych) z poleceniem skopiowania do schowka deklaracji wywołania wybranej funkcji
+ + dodana funkcja wbudowana SetWithSignal($zmienna, <wartość>), ustawia przekazaną wartość wskazanej zmiennej i wymusza wygenerowanie zdarzenia nawet jeśli wartość zmiennej pozostała bez zmian
+ + funkcja SetValue(...) jako czwarty parametr nie przyjmuje indeksu a ilość, SetValue( $tablica , $wartosc , $indeks , $ile )
+
+1.0.2.3 (26.09.2009):
+ * funkcja GetRandom($min, $max) może zwrócić także $max
+ + funkcja Error($informacja) przerywa działanie skryptu i wypisuje $informacja w oknie Log
+ * poprawiona obsługa znaku ucieczki (usuwanie znaku z łańcucha)
+ + funkcja Power($liczba, $potega) podnosi liczbę do wskazanej potęgi ($liczba typu int lub double, $potęga typu int)
+ + funkcja Sqrt($liczba) oblicza pierwiastek kwadratowy podanej liczby (int lub double, zwraca double)
+ * funkcja SetSize($tablica, $rozmiar) sprawdza czy $rozmiar >= 0
+ + funkcja ToBoolArray($w1, $w2, $w3, ...) tworzy tablicę bool z podanych wartości
+ + funkcja ToIntArray($w1, $w2, $w3, ...) tworzy tablicę int z podanych wartości
+ + funkcja ToDoubleArray($w1, $w2, $w3, ...) tworzy tablicę double z podanych wartości
+ + funkcja ToStringArray($w1, $w2, $w3, ...) tworzy tablicę string z podanych wartości
+ + funkcja ToArray($w1, $w2, $w3, ...) tworzy tablicę object z podanych wartości
+ + funkcja Floor($liczba) zwraca podłogę (int) liczby (double)
+ + funkcja Ceiling($liczba) zwraca sufit (int) liczby (double)
+ + funkcja Truncate($liczba) zwraca część całkowitą (int) liczby (double)
+ + funkcja Abs($liczba) zwraca wartość absolutną (int, double) liczby (int, double)
+ + funkcja Round($liczba) zwraca zaokrągloną wartość (int) liczby (double)
+ + wskazanie funkcji wywoływanej gdy zmienna zmieni wartość (wywołanie przed zdarzeniem), funkcja musi być jednoargumentowa, w definicji zmiennej piszemy "function = Funkcja;"
+ + sprawdzanie zgodności typów zmiennych zadeklarowanych w skrypcie i w modułach
+ + zdarzenie variables_changed zmiany wielu zmiennych, deklaracja "variables_changed [minimalna liczba zmiennych zmienionych aby wywołane zostało zdarzenie] $zmienna1 $zmienna2 $zmienna3 ... {}", minimum dwie zmienne, "minimum" opcjonalne (> 0 i <= ilość zmiennych)
+ * poprawione zachowanie UI przy wczytywaniu błędnych skryptów
+ + wyświetlanie nazwy pliku modułu w zakładkach modułów
+ + pomijanie wczytywania modułów o nazwach już wczytanych modułów
+ * poprawione informowanie o błędach w skryptach

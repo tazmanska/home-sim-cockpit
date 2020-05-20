@@ -1,0 +1,189 @@
+// przyk³adowe profile
+// wersja 1 (16.06.2009)
+// autor: codeking
+
+// to jest plik z przyk³adowymi profilami s³u¿¹cymi jako przyk³ady
+// w pliku skryptów mo¿na umieszczaæ komentarze w linii takie jak ten tekst
+// komentarz zaczyna siê dwoma znakami // i "trwa" do koñca danego wiersza
+
+// wszystkie zawarte w tym pliku profile wykorzystuj¹ modu³ testowy
+// jest on jednoczeœnie modu³em wejœciowym jak i wyjœciowym
+// pozwala na "zabawê" ze zmiennymi wszystkich dostêpnych typów czyli:
+// bool - zmienna logiczna, mo¿liwe wartoœci: true, false
+// int - 32-bitowa liczba ca³kowita ze znakiem
+// double - 64-bitowa liczba rzeczywista ze znakiem
+// string - ³añcuch tekstowy o dowolnej d³ugoœci
+// aby "bawiæ" siê tymi zmiennymi nale¿y zaznaczyæ modu³ na zak³adce "Modu³y wejœcia" lub "Modu³y wyjœcia"
+// i klikn¹æ przycisk "Konfiguracja...", otworzy siê okienko do zmiany wartoœci zmiennych (wejœciowych)
+// i œledzenia wartoœci zmiennych wyjœciowych
+
+// definicja profilu zaczyna siê od s³owa 'profile' a nastêpnie nazwy profilu w cudzys³owach "nazwa"
+// profil to tak naprawdê skrypt, w którym definiuje siê zmienne, zdarzenia i operacje na zmiennych
+// ten profil jest prostym przyk³adem reagowania na przyciœniêcie przycisku
+profile "Przycisk -> dioda"
+{
+	// definicja zmiennej wejœciowej o nazwie "przycisk"
+	variable $przycisk
+	{
+		// "kierunek" zmiennej, in - zmienna wejœciowa
+		direct = in;
+		
+		// nazwa modu³u z którego pochodzi zmienna
+		// odczytane z konsoli na zak³adce "Modu³y wejœcia"
+		module = "TestModule";
+		
+		// identyfikator zmiennej w module
+		// odczytanie z konsoli na zak³adce "Modu³y wejœcia" (nale¿y zaznaczyæ modu³ "TestModule" aby pokaza³a siê lista dostêpnych zmiennych wejœciowych
+		id = "form1:checkbox1";		
+		
+		// typ zmiennej
+		// odczytanie z konsoli na zak³adce "Modu³y wejœcia" z listy zmiennych modu³u "TestModule"
+		type = bool;
+	}
+	
+	// definicja zmiennej wyjœciowej o nazwie "dioda"
+	variable $dioda
+	{
+		// "kierunek" zmiennej, out - zmienna wyjœciowa
+		direct = out;
+		
+		// nazwa modu³u z którego pochodzi zmienna
+		module = "TestModule";
+		
+		// identyfikator zmiennej w module
+		id = "form2:checkbox1";		
+		
+		// typ zmiennej
+		type = bool;
+		
+		// wartoœæ pocz¹tkowa, nie jest wysy³ana do modu³u podczas uruchamiania !
+		// aby to zrobiæ, nale¿y w zdarzeniu "output_started" wywo³aæ funkcjê "ForceSignal($dioda)"
+		// spowoduje ona wymuszenie wys³ania wartoœci do modu³u (nawet gdy zmienna nie zmieni wartoœci)
+		value = true;
+	}
+	
+	// poni¿ej s¹ bloki akcji wywo³ywanych przed i po dzia³aniu profilu, ich definiowane jest opcjonalne
+	// kolejnoœæ wywo³ywania: initialize -> output_started -> input_started -> (przetwarzanie zdarzeñ - wykonywanie skryptu) -> input_stopped -> output_stopped -> uninitialize
+	
+	initialize
+	{
+		// operacje wykonywane przed uruchomieniem modu³ów wejœcia-wyjœcia
+	}
+	
+	// blok akcji wywo³ywany gdy modu³y wyjœciowe zostan¹ uruchomione
+	output_started
+	{
+		// operacje wykonywane po uruchomieniu modu³ów wyjœcia ale przed uruchomieniem modu³ów wejœcia (brak zdarzeñ)
+		
+		// funkcja wymusza powiadomienie "s³uchaczy" (zdarzenia w skrypcie i/lub modu³y wyjœciowe) o wartoœci zmiennej mimo i¿ siê nie zmieni³a
+		ForceSignal( $dioda ) ;
+	}
+		
+	input_started
+	{
+		// operacje wykonywane po uruchomieniu modu³ów wejœcia ale przed rozpoczêciem przetwarzania zdarzeñ (mog¹ ju¿ byæ w kolejce)
+	}
+	
+	input_stopped
+	{
+		// operacje wykonywane po zatrzymaniu modu³ów wejœcia
+	}
+	
+	output_stopped
+	{
+		// operacje wykonywane po zatrzymaniu modu³ów wyjœcia
+	}
+	
+	uninitialize
+	{
+		// operacje wykonywane po zatrzymaniu modu³ów wejœcia-wyjœcia
+	}
+	
+	// definicja zdarzenia zmiany wartoœci zmiennej $przycisk
+	variable_changed $przycisk
+	{
+		// przypisanie zmiennej $dioda wartoœci zmiennej $przycisk
+		// obie zmienne s¹ tego samego typu
+		// w rezultacie, gdy nasz teoretyczny przycisk zostanie naciœniêty
+		// to dioda (wirtualna) zapali siê
+		$dioda = $przycisk ;
+	}
+}
+
+// profil pokazuje jak u¿ywaæ zmiennych typu int i string oraz warunku if
+profile "Przyciski + i -"
+{
+	variable $przyciskPlus
+	{
+		direct = in;
+		module = "TestModule";
+		id = "form1:checkbox1";
+		type = bool;
+	}
+	
+	variable $przyciskMinus
+	{
+		direct = in;
+		module = "TestModule";
+		id = "form1:checkbox2";
+		type = bool;
+	}
+	
+	variable $liczba
+	{
+		direct = out;
+		module = "TestModule";
+		id = "form2:liczba1int";
+		type = int;
+	}
+	
+	variable $napis
+	{
+		direct = out;
+		module = "TestModule";
+		id = "form2:string1";
+		type = string;
+	}
+	
+	variable_changed $przyciskPlus
+	{
+		// spradzenie czy przycisk jest naciœniêty
+		if ( $przyciskPlus == true )
+		{
+			$liczba = $liczba + 1;
+		}
+	}
+	
+	output_started
+	{
+		// to wywo³anie funkcji "ForceSignal(...)" spowoduje wywo³anie zdarzenia "variable_changed $liczba"
+		ForceSignal($liczba);
+	}
+	
+	variable_changed $przyciskMinus
+	{
+		// nie sprawdzamy czy przycisk jest naciœniêty
+		// przy ka¿dej zmianie stanu przycisku wartoœæ zmiennej $liczba zmniejszy siê o 1
+		$liczba = $liczba - 1;
+	}
+	
+	// mo¿emy reagowaæ tak¿e na zmiany wartoœci zmiennych wyjœciowych (generowane przez nas samych poprzez operacje na tych zmiennych)
+	variable_changed $liczba
+	{
+		if ( $liczba < 0 )
+		{
+			$napis = "Zmienna $liczba jest mniejsza od 0";
+		}
+		else
+		{
+			if ( $liczba > 0 )
+			{
+				$napis = "Zmienna $liczba jest wiêksza od 0";
+			}
+			else
+			{
+				$napis = "Zmienna $liczba jest równa 0";
+			}
+		}
+	}
+}

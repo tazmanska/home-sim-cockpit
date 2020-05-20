@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB355C69-16BF-4537-BC82-44C89E03DB07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeSimCockpit</RootNamespace>
+    <AssemblyName>HomeSimCockpit</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Control-Panel.ico</ApplicationIcon>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Tomek\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Languages.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputVariable.cs" />
+    <Compile Include="Parser\Akcja.cs" />
+    <Compile Include="Parser\Akcje.cs" />
+    <Compile Include="Parser\Argument.cs" />
+    <Compile Include="Parser\DefinicjaFunkcji.cs" />
+    <Compile Include="Parser\EndExecutionException.cs" />
+    <Compile Include="Parser\ExecutingScriptException.cs" />
+    <Compile Include="Parser\Funkcja.cs" />
+    <Compile Include="Parser\FunkcjaDelegate.cs" />
+    <Compile Include="Parser\FunkcjaInformacje.cs" />
+    <Compile Include="Parser\FunkcjaModulu.cs" />
+    <Compile Include="Parser\FunkcjeWbudowane.cs" />
+    <Compile Include="Parser\HCPSToken.cs" />
+    <Compile Include="Parser\HCPSTokenizer.cs" />
+    <Compile Include="Parser\CheckingScriptException.cs" />
+    <Compile Include="Parser\IncludeStatement.cs" />
+    <Compile Include="Parser\IProgress.cs" />
+    <Compile Include="Parser\ISlownikFunkcjiModulow.cs" />
+    <Compile Include="Parser\ISlownikSkryptu.cs" />
+    <Compile Include="Parser\Jezeli2.cs" />
+    <Compile Include="Parser\KierunekZmiennej.cs" />
+    <Compile Include="Parser\Operacja.cs" />
+    <Compile Include="Parser\OperatorDwuargumentowyTyp.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\ParsingScriptException.cs" />
+    <Compile Include="Parser\ProfilWykonania.cs" />
+    <Compile Include="Parser\Przypisanie.cs" />
+    <Compile Include="Parser\Return.cs" />
+    <Compile Include="Parser\ReturnWFunkcji.cs" />
+    <Compile Include="Parser\Stala.cs" />
+    <Compile Include="Parser\UserErrorException.cs" />
+    <Compile Include="Parser\Utils.cs" />
+    <Compile Include="Parser\Wartosc.cs" />
+    <Compile Include="Parser\Warunek.cs" />
+    <Compile Include="Parser\WarunekLogiczny.cs" />
+    <Compile Include="Parser\WarunekLogicznyTyp.cs" />
+    <Compile Include="Parser\Wyrazenia.cs" />
+    <Compile Include="Parser\Wyrazenie.cs" />
+    <Compile Include="Parser\ZbiorWartosci.cs" />
+    <Compile Include="Parser\Zdarzenie.cs" />
+    <Compile Include="Parser\ZmianaZmiennej.cs" />
+    <Compile Include="Parser\ZmianaZmiennejPowiadomienie.cs" />
+    <Compile Include="Parser\ZmianaZmiennych.cs" />
+    <Compile Include="Parser\Zmienna.cs" />
+    <Compile Include="Parser\ZmiennaNieistniejaca.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinAPI.cs" />
+    <EmbeddedResource Include="Main.pl.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressDialog.pl.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Resources.pl.resx" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="Dokumentacja\CzytajTo.docx" />
+    <None Include="Dokumentacja\CzytajTo.pdf" />
+    <None Include="Dokumentacja\Gramatyka.txt" />
+    <None Include="Dokumentacja\Opisy.txt" />
+    <None Include="key.snk" />
+    <None Include="skrypty\PrzykładoweSkrypty.hcps" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="skrypty\TestFalcon.hcps" />
+    <None Include="skrypty\TestowySkrypt.hcps" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="InputVariable.cs" />
+    <Compile Include="ScriptLogDelegate.cs" />
+    <Compile Include="UI\Language.cs" />
+    <Compile Include="UI\UIStrings.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VariableBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomowyPanelSDK\HomeSimCockpitSDK.csproj">
+      <Project>{DE369161-CA79-4C0D-BD34-2CA4D1925182}</Project>
+      <Name>HomeSimCockpitSDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Control-Panel.ico" />
+    <Content Include="Dokumentacja\Historia.txt" />
+    <Content Include="Dokumentacja\ToDo.txt" />
+    <None Include="norunning.ico" />
+    <None Include="running.ico" />
+    <Content Include="tmp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

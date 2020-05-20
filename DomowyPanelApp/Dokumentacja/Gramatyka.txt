@@ -1,0 +1,25 @@
+﻿plik = komentarze | skrypty
+komentarze = // | /**/
+skrypty = komentarze | skrypt
+skrypt = "script" + <nazwa> + "{" + (<null> | komentarze | deklaracje | zdarzenia) + "}"
+<nazwa> = string, minimum jeden znak
+<null> = białe znaki
+deklaracje = <variable> | <const> | <variable_changed> | <variables_changed> | <initialize> | <output_started> | <output_stopped> | <input_started> | <input_stopped>
+<variable> = "variable" + <nazwa_zmiennej> + "{" + przypisania_w_deklaracji_zmiennej + "}"
+<nazwa_zmiennej> = "$" + znaki alfanumeryczne (pierwszy znak różny od cyfry)
+przypisania_w_deklaracji_zmiennej = keyword_deklaracji_zmiennej + "=" + (typ | kierunek | nazwa_modulu | identyfikator_zmiennej | wartosc) + ";"
+keyword_deklaracji_zmiennej = "type" | "module" | "id" | "value" | "direct"
+typ = "bool" | "int" | "double" | "string" | "bool_array" | "int_array" | "double_array" | "string_array" | "array"
+kierunek = "in" | "out"
+nazwa_modulu = string, minimum jeden znak
+identyfikator_zmiennej = string, minimum jeden znak
+wartosc = <bool> | <liczba_int> | <liczba_double> | <string> | <tablica_bool> | tablica_int | tablica_double | tablica_string | tablica
+<bool> = true | false
+<liczba_int> = ("" | "-" | "0x") + cyfry
+<liczba_double> = ("" | "-") + cyfry + ("" | ".") + ("" | "d")
+<string> = dowolna ilość dowolnych znaków
+<tablica_bool> = "{" +  (X* <bool> + ",") + "}"
+
+<const> = "const" + <nazwa_stalej> + "{" + przypisania_w_deklaracji_stalej + "}"
+<nazwa_stalej> = <nazwa_zmiennej>
+przypisania_w_deklaracji_stalej = keyword_deklaracji_stalej + "=" + (typ,

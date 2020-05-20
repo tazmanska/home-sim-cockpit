@@ -1,0 +1,164 @@
+// test modulu FalconData
+script "Falcon"
+{
+
+	variable $lightBits
+	{
+		direct = in;
+		module = "FalconData";
+		id = "lightBits";
+		type = int;
+	}
+
+	variable $lightBits2
+	{
+		direct = in;
+		module = "FalconData";
+		id = "lightBits2";
+		type = int;
+	}
+	
+	variable $lightBits3
+	{
+		direct = in;
+		module = "FalconData";
+		id = "lightBits3";
+		type = int;
+	}
+	
+	variable $rpm
+	{
+		direct = in;
+		module = "FalconData";
+		id = "rpm";
+		type = double;		
+	}
+	
+	variable $rpmOut
+	{
+		module = "TestModule";
+		id = "out:double_00";
+		direct = out;
+		type = double;
+	}
+	
+	variable $gearPos
+	{
+		direct = in;
+		module = "FalconData";
+		id = "gearPos";
+		type = double;
+	}
+	
+	variable $gearPosInfo
+	{
+		direct = out;
+		module = "TestModule";
+		id = "out:string_00";
+		type = string;
+	}
+
+	variable $info
+	{
+		direct = out;
+		module = "TestModule";
+		id = "out:string_01";
+		type = string;
+	}
+
+	variable $info2
+	{
+		direct = out;
+		module = "TestModule";
+		id = "out:string_02";
+		type = string;
+	}
+
+	variable $info3
+	{
+		direct = out;
+		module = "TestModule";
+		id = "out:string_03";
+		type = string;
+	}
+	
+	variable $isFalconRunning
+	{
+		direct = in;
+		module = "FalconData";
+		id = "_runningFalcon";
+		type = bool;
+	}
+	
+	variable $MasterCaution
+	{
+		direct = out;
+		module = "TestModule";
+		id = "out:bool_01";		
+		type = bool;
+	}
+	
+	variable $isFalconRunningDioda
+	{
+		direct = out;
+		module = "TestModule";
+		id = "out:bool_00";		
+		type = bool;
+		value = true;
+	}
+
+	output_started
+	{
+		ForceSignal( $gearPos );
+		ForceSignal( $lightBits );
+		ForceSignal( $lightBits2 );
+		ForceSignal( $lightBits3 );
+		ForceSignal( $isFalconRunning );
+		ForceSignal( $rpm );
+	}
+	
+	variable_changed $lightBits
+	{
+		$MasterCaution = GetBitState( $lightBits , 0 );	
+		$info = "$lightBits = " + ToString( $lightBits );
+	}
+
+	variable_changed $lightBits2
+	{
+		$info2 = "$lightBits2 = " + ToString( $lightBits2 );
+	}
+	
+	variable_changed $lightBits3
+	{
+		$info3 = "$lightBits3 = " + ToString( $lightBits3 );
+	}
+	
+	variable_changed $isFalconRunning
+	{
+		$isFalconRunningDioda = $isFalconRunning ;
+	}
+	
+	variable_changed $rpm
+	{
+		$rpmOut = $rpm ;
+	}
+	
+	variable_changed $gearPos
+	{	
+		if ( $gearPos == 0.0 )
+		{
+			$gearPosInfo = "Podwozie: UP" ;
+		}
+		else
+		{
+			if ( $gearPos == 1.0 )
+			{
+				$gearPosInfo = "Podwozie: DOWN" ;
+			}
+			else
+			{
+				$gearPosInfo = "Podwozie: MOVING" ;
+			}
+		}
+	}
+}

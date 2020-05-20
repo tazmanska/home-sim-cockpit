@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type='text/xsl' href='update-html.xsl'?>
+<update cycle="6" date="2 September 2011">
+    <files>
+        <addFile name="modules\OC.dll" version="1.0.0.0" url="_files/modules/OC.dll" />
+        <addFile name="modules\DataViaNetwork.dll" version="1.0.0.2" url="_files/modules/DataViaNetwork.dll" />
+        <addFile name="HomeSimCockpit.exe" version="1.1.1.2" url="_files/HomeSimCockpit.exe" />
+        <addFile name="pl\HomeSimCockpit.resources.dll" version="1.1.1.2" url="_files/pl/HomeSimCockpit.resources.dll" />
+        <addFile name="modules\FSData.dll" version="1.0.0.3" url="_files/modules/FSData.dll" />
+        <addFile name="modules\PPJoyControl.dll" version="1.0.0.0" url="_files/modules/PPJoyControl.dll" />
+        <addFile name="modules\PPJoyWrapper.dll" version="2.2.0.0" url="_files/modules/PPJoyWrapper.dll" />
+        <addFile name="modules\simOUT.dll" version="1.0.0.3" url="_files/modules/simOUT.dll" />
+        <addFile name="modules\HomeSimCockpitSDK.dll" version="1.0.0.4" url="_files/modules/HomeSimCockpitSDK.dll" />
+        <addFile name="modules\GameControllers.dll" version="1.0.0.4" url="_files/modules/GameControllers.dll" />
+    </files>
+    <actions>
+    </actions>
+</update>

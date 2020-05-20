@@ -1,0 +1,15 @@
+﻿19.11.2009:
+ * poprawiono obsługę wartości osi
+ + możliwość wyświetlania stanu osi w odniesieniu do ustawionego zakresu
+ + dodano możliwość otwarcia okna konfiguracyjnego kontrolera z poziomu aplikacji DomowyKokpit
+ * poprawiono błąd z wyświetlaniem listy przycisków kontrolera
+ + na liście kontrolerów uwzględnienie również kontrolerów nie podłączonych, można wtedy zmienić ID
+ + wyświetlenie dodatkowych informacji o kontrolerze (ID i Index)
+ + możliwość usunięcia z konfiguracji wybranego (np. niepodłączonego) kontrolera
+ + możliwość wyboru metody odczytywania stanu kontrolera - albo zdarzenie, albo okresowo z ustawianym interwałem
+ 
+ TODO:
+  
+  
+  
+  

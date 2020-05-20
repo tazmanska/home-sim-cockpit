@@ -1,0 +1,48 @@
+﻿Opis pliku update.xml
+
+<?xml version="1.0"?>
+<!-- 
+cycle oznacza numer aktualizacji (numer wydania pliku update.xml) 
+-->
+<update cycle="0">
+    <!--
+    lista plików
+    -->
+    <files>
+        <!--
+        Dodanie lub aktualizacja pliku.
+        name - nazwa pliku wraz z nazwą katalogu w którym powinien się znajdować
+        version - wersja pliku w formacie major.minor.build.revision, jeśli wersji nie to znaczy, że plik musi być ale dowolnej wersji (np. xml)
+        url - link do najnowszej wersji pliku
+        -->
+        <addFile name="" version="" url="" />
+        <!--
+        Usunięcie pliku
+        name - nazwa pliku wraz z nazwą katalogu w którym się znajduje
+        -->
+        <removeFile name="" />
+    </files>
+    <!--
+    lista akcji wykonywanych po aktaulizacji
+    po aktualizacji muszą być wykonane wszystkie akcje o numerze cycle większym od numeru ostatniej aktualizacji
+    -->
+    <actions>
+        <!--
+        cycle - numer aktaualizacji dla której jest akcja
+        url - link do pliku akcji (exe), który należy pobrać i uruchomić
+        -->
+        <action cycle="0" url="" />
+    </actions>
+</update>
+
+
+Opis pliku updater.xml
+
+<?xml version="1.0"?>
+<update>
+    <!--
+    version - wersja programu przeprowadzającego aktaulizcję HSC
+    url - link do programu
+    -->
+    <updater version="1.0.0.0" url="_files/Updater.exe" />
+</update>

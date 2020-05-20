@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- konfiguracja modułu -->
+<configuration>
+  
+  <!-- ustawienie zmiennych wyjściowych (wychodzą z FSX i wchodzą do skryptu) -->
+  <inputs>
+    
+    <!-- zmienna pobierana z FSX
+      id - identyfikator zmiennej w module
+      description - opis zmiennej
+      type - typ wartości zwracanej
+      fsxName - wewnętrzna nazwa zmiennej w FSX
+      fsxUnit - jednostki wartości zmiennej w FSX
+      fsxType - wewnętrzny typ zmiennej w FSX
+      fsxEpsilon - określa jaka zmiana ma być raportowana przez FSX (więcej w FSX SimConnect SDK)
+      fsxGroup - (0-65535) identyfikator grupy do której należy zmienna (ma to wpływ na efektywność współdziałania z FSX)
+    -->
+    <input
+      id="com1activefrequency" 
+      description="Aktywna częstotliwość COM1"
+      type="Double"
+      fsxName="COM ACTIVE FREQUENCY:1"
+      fsxUnit="Frequency_BCD16"
+      fsxType="INT32"
+      fsxEpsilon="0"
+      fsxGroup="1"      
+    />
+
+    <input
+      id="com2activefrequency"
+      description="Aktywna częstotliwość COM2"
+      type="Double"
+      fsxName="COM ACTIVE FREQUENCY:2"
+      fsxUnit="Frequency_BCD16"
+      fsxType="INT32"
+      fsxEpsilon="0"
+      fsxGroup="1"
+    />
+
+    <input
+      id="com1standbyfrequency"
+      description="Nieaktywna częstotliwość COM1"
+      type="Double"
+      fsxName="COM STANDBY FREQUENCY:1"
+      fsxUnit="Frequency_BCD16"
+      fsxType="INT32"
+      fsxEpsilon="0"
+      fsxGroup="1"
+    />
+
+    <input
+      id="com2standbyfrequency"
+      description="Nieaktywna częstotliwość COM2"
+      type="Double"
+      fsxName="COM STANDBY FREQUENCY:2"
+      fsxUnit="Frequency_BCD16"
+      fsxType="INT32"
+      fsxEpsilon="0"
+      fsxGroup="1"
+    />
+
+    <input
+      id="nav1activefrequency"
+      description="Aktywna częstotliwość NAV1"
+      type="Double"
+      fsxName="NAV ACTIVE FREQUENCY:1"
+      fsxUnit="MHz"
+      fsxType="FLOAT32"
+      fsxEpsilon="0"
+      fsxGroup="2"
+    />
+
+    <input
+      id="nav2activefrequency"
+      description="Aktywna częstotliwość NAV2"
+      type="Double"
+      fsxName="NAV ACTIVE FREQUENCY:2"
+      fsxUnit="MHz"
+      fsxType="FLOAT32"
+      fsxEpsilon="0"
+      fsxGroup="2"
+    />
+
+    <input
+      id="nav1standbyfrequency"
+      description="Nieaktywna częstotliwość NAV1"
+      type="Double"
+      fsxName="NAV STANDBY FREQUENCY:1"
+      fsxUnit="MHz"
+      fsxType="FLOAT32"
+      fsxEpsilon="0"
+      fsxGroup="2"
+    />
+
+    <input
+      id="nav2standbyfrequency"
+      description="Nieaktywna częstotliwość NAV2"
+      type="Double"
+      fsxName="NAV STANDBY FREQUENCY:2"
+      fsxUnit="MHz"
+      fsxType="FLOAT32"
+      fsxEpsilon="0"
+      fsxGroup="2"
+    />
+
+    <input
+      id="gearCenterPosition"
+      description="Pozycja przedniego golenia"
+      type="Int"
+      fsxName="GEAR CENTER POSITION"
+      fsxUnit="Percent"
+      fsxType="INT32"
+      fsxEpsilon="1"
+      fsxGroup="3"
+    />
+
+    <input
+      id="gearLeftPosition"
+      description="Pozycja lewego golenia"
+      type="Int"
+      fsxName="GEAR LEFT POSITION"
+      fsxUnit="Percent"
+      fsxType="INT32"
+      fsxEpsilon="1"
+      fsxGroup="3"
+    />
+
+    <input
+      id="gearRightPosition"
+      description="Pozycja prawego golenia"
+      type="Int"
+      fsxName="GEAR RIGHT POSITION"
+      fsxUnit="Percent"
+      fsxType="INT32"
+      fsxEpsilon="1"
+      fsxGroup="3"
+    />
+
+  </inputs>
+
+  <!-- ustawienie zmiennych wejściowych -->
+  <outputs/>
+  
+</configuration>

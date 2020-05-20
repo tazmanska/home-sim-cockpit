@@ -1,0 +1,212 @@
+﻿	function wyswietlDane()
+	{
+		if ( $trybLCD1 == 0 )
+		{
+			$radioLabel = "c1  c2  " ;
+			$r1a = $com1active ;
+			$r1s = $com1standby ;
+			$r2a = $com2active ;
+			$r2s = $com2standby ;			
+		}
+		else
+		{
+			if ( $trybLCD1 == 1 )
+			{
+				$radioLabel = "n1  n2  " ;
+				$r1a = $nav1active ;
+				$r1s = $nav1standby ;
+				$r2a = $nav2active ;
+				$r2s = $nav2standby ;	
+			}
+			else
+			{
+				if ( $trybLCD1 == 2 )
+				{
+					$gearLabel = "GEAR Nose:   L:  R: " ;
+					$gearCenterLabel = $gearCenterInfo ;
+					$gearLeftLabel = $gearLeftInfo ;
+					$gearRightLabel = $gearRightInfo ;					
+				}
+				else
+				{
+					$lcdText = " * * error * * " ;
+				}
+			}
+		}
+		return null ;
+	}	
+	
+	variable_changed $przycisk1
+	{
+		if ( $trybLCD1 >= 2 )
+		{
+			$trybLCD1 = 0 ;
+		}
+		else
+		{
+			$trybLCD1 = $trybLCD1 + 1 ;
+		}
+		$r1a = null ;
+		$r1s = null ;
+		$r2a = null ;
+		$r2s = null ;
+		$lcdText = null ;
+		$radioLabel = null ;
+		$gearCenterLabel = null ;
+		$gearLeftLabel = null ;
+		$gearRightLabel = null ;
+		$gearLabel = null ;
+		wyswietlDane() ;
+	}
+	
+	variable_changed $przycisk2
+	{
+		$dioda3 = $przycisk2 ;
+		$dioda4 = $przycisk2 ;
+	}
+	
+	variable_changed $numer1
+	{
+		$numer2 = $numer1 ;
+	}
+	
+	variable_changed $com1a
+	{
+		$com1active = ZamienString( FormatujLiczbe( $com1a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $com1s
+	{
+		$com1standby = ZamienString( FormatujLiczbe( $com1s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $com2a
+	{
+		$com2active = ZamienString( FormatujLiczbe( $com2a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $com2s
+	{
+		$com2standby = ZamienString( FormatujLiczbe( $com2s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav1a
+	{
+		$nav1active = ZamienString( FormatujLiczbe( $nav1a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav1s
+	{
+		$nav1standby = ZamienString( FormatujLiczbe( $nav1s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav2a
+	{
+		$nav2active = ZamienString( FormatujLiczbe( $nav2a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav2s
+	{
+		$nav2standby = ZamienString( FormatujLiczbe( $nav2s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $gearCenter
+	{
+		if ( $gearCenter == 0 )
+		{
+			$gearCenterInfo = "UP" ;
+		}
+		else
+		{
+			if ( $gearCenter == 100 )
+			{
+				$gearCenterInfo = "DOWN" ;
+			}
+			else
+			{
+				$gearCenterInfo = "MOVE" ;
+			}
+		}
+		if ( $trybLCD1 == 2 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $gearLeft
+	{
+		if ( $gearLeft == 0 )
+		{
+			$gearLeftInfo = "UP" ;
+		}
+		else
+		{
+			if ( $gearLeft == 100 )
+			{
+				$gearLeftInfo = "DOWN" ;
+			}
+			else
+			{
+				$gearLeftInfo = "MOVE" ;
+			}
+		}
+		if ( $trybLCD1 == 2 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $gearRight
+	{
+		if ( $gearRight == 0 )
+		{
+			$gearRightInfo = "UP" ;
+		}
+		else
+		{
+			if ( $gearRight == 100 )
+			{
+				$gearRightInfo = "DOWN" ;
+			}
+			else
+			{
+				$gearRightInfo = "MOVE" ;
+			}
+		}
+		if ( $trybLCD1 == 2 )
+		{
+			wyswietlDane() ;
+		}
+	}

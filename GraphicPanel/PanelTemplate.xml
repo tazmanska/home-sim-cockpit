@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<panel name="TestPanel" showCaption="false" width="400" height="100" left="100" top="100">
+    <background>
+        <image name="default" file="tlo.png" default="true" />
+	<image name="default2" file="tlo2.png" />
+    </background>
+    <area name="led" left="10" top="10" width="30" height="30" clickable="false" order="0">
+        <image name="red" file="led.png" default="true" />
+        <image name="yellow" file="led2.png" />
+    </area>
+</panel>

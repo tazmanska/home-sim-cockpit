@@ -1,0 +1,93 @@
+﻿dodać zmienne typu int64 (lub zamienić int na int64) i uint64
+
+dodać typ object - dowolny typ
+
+obsługa zmiennych lokalnych w skryptach
+
+dodanie obsługi operatorów OR i AND w warunkach IF
+
+moduł rs232 w lcd nie można podać dowolnie długiego identyfikatora !!! i wymagany jest opis !!!
+
+moduł FSDataOutput - offset 3200 do wysyłania klawiszy - do sprawdzenia i zrobienia
+			
+
+sprawdzić działanie i poprawić na systemach w innej wersji językowej
+
+gamecontrollers... - opcja traktowania przycisku jako przełącznika typu toggle, przy fizycznym naciśnięu przycisku
+ wysłanie zdarzenia naciśnięcia i zdarzenia zwolnienia, przy fizycznym zwolnieniu wysłanie dodatkowego zdarzenia 
+ (dodatkowa zmienna do przycisku) naciśnięcia i zwolnienia
+ 
+LCDOnLPT - umożliwić wpisanie adresu portu LPT, dowolna ilość używanych portów
+
+DK - skrypty LUA
+
+DK i pluginy - wielojęzyczność
+
+moduł testowy - gdy nie jest włączony a mają byc wyświetlanie zmienne to jest błąd Invoke nie można wykonać...
+
+FSData - poprawienie pliku ze zmiennymi - sprawdzić które offsety są FLOAT64 i ustawić typ na FLOAT64
+
+dk - funkcja do normalizacji stringów (usuwania znaków ą, ę itd.)
+
+dk - połączenie zdarzeń variable_changed i variables_changed żeby była jedna definicja, po co dwie różne ?
+
+możliwość włączenia kasowania zdublowanych zmiennych w kolejce zdarzeń
+
+simOUT i simIN - ikonki w drzewku urządzeń
+
+FSData - edytor offsetów
+
+HSC - ostatnio otwarty plik na szczycie listy ostanich plików
+
+HSC - funkcja And i Or - do tworzenia logicznych warunków
+
+HSC - funkcja Loop(<nazwa funkcji wołanej z parametrem $index>), jeśli wołana funkcja zwróci true to pętla wykonywana jest dalej,
+    każda inna zwrócona wartość oznacza koniec pętli
+    
+simIN - zmienne _fast dla enkoderów pojawiają się dopiero po restarcie HSC
+    
+    
+Sprawdź coś takiego:
+[script]
+//-------------------------------------POS
+
+
+variable $efis_TFC
+   {module = "GameControllersInput";id = "MJ16:przycisk_047";type = bool;direct = in;}
+
+   variable_changed$efis_TFC
+   {
+      SetWithSignal($fs_MACRO, "B767:POS");         
+   }
+
+//-------------------------------------RED
+
+
+variable $efis_TFC
+   {module = "GameControllersInput";id = "MJ16:przycisk_046";type = bool;direct = in;}
+
+   variable_changed$efis_TFC
+   {
+      SetWithSignal($fs_MACRO, "B767:RED");         
+   }
+
+
+//-------------------------------------WHITE
+
+
+variable $efis_TFC
+   {module = "GameControllersInput";id = "MJ16:przycisk_045";type = bool;direct = in;}
+
+   variable_changed$efis_TFC
+   {
+      SetWithSignal($fs_MACRO, "B767:WHITE");         
+   }
+[/script]
+
+
+
+ - moduł fsdata - zmienna z informacją czy jest połączenie z FS
+ 
+ - hsc - sortowanie funkcji po nazwie
+ 
+ - jeśli plik ma tylko jeden skrypt to domyślnie trzeba go wybrać

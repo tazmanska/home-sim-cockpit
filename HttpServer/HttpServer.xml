@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<configuration>
+    <server port="8080" />
+    <applications>
+        <application name="InstructorStation" description="" default="F:\DANE_1\programowanie\WWW\HSC_InstructorStation\index.html" />
+	
+		<application name="Test" description="" default="F:\DANE_1\programowanie\WWW\HSC_test\index.html" />
+    </applications>
+</configuration>

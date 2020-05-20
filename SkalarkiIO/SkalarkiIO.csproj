@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ECF7CE3-D94F-447E-A530-3DA6B269C6BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkalarkiIO</RootNamespace>
+    <AssemblyName>SkalarkiIO</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Tomek\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <OutputPath>..\DomowyPanelApp\bin\Debug\modules\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditDeviceDialog.Designer.cs">
+      <DependentUpon>AddEditDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditDigitalOutputSetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditDigitalOutputSetDialog.Designer.cs">
+      <DependentUpon>AddEditDigitalOutputSetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEncoder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEncoder.Designer.cs">
+      <DependentUpon>AddEditEncoder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditLED7DisplayOutputSetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditLED7DisplayOutputSetDialog.Designer.cs">
+      <DependentUpon>AddEditLED7DisplayOutputSetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Align.cs" />
+    <Compile Include="Append.cs" />
+    <Compile Include="ConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationDialog.Designer.cs">
+      <DependentUpon>ConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device.cs" />
+    <Compile Include="DeviceException.cs" />
+    <Compile Include="DeviceType.cs" />
+    <Compile Include="DeviceType1.cs" />
+    <Compile Include="DeviceType2.cs" />
+    <Compile Include="DigitalInput.cs" />
+    <Compile Include="DigitalOutput.cs" />
+    <Compile Include="DigitalOutputSet.cs" />
+    <Compile Include="Display.cs" />
+    <Compile Include="Encoder.cs" />
+    <Compile Include="EncoderInput.cs" />
+    <Compile Include="IDevices.cs" />
+    <Compile Include="InputVariable.cs" />
+    <Compile Include="LED7DisplayOutput.cs" />
+    <Compile Include="LED7DisplayOutputSet.cs" />
+    <Compile Include="LED7DisplaysBrightnessOutputVariable.cs" />
+    <Compile Include="LED7DisplaysDictionary.cs" />
+    <Compile Include="ModulesConfiguration.cs" />
+    <Compile Include="MPUSBAPI.cs" />
+    <Compile Include="NumericColumn.cs" />
+    <Compile Include="OutputVariable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkalarkiIO.cs" />
+    <Compile Include="TestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDialog.Designer.cs">
+      <DependentUpon>TestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trim.cs" />
+    <EmbeddedResource Include="AddEditDeviceDialog.resx">
+      <DependentUpon>AddEditDeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditDigitalOutputSetDialog.resx">
+      <DependentUpon>AddEditDigitalOutputSetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditEncoder.resx">
+      <DependentUpon>AddEditEncoder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditLED7DisplayOutputSetDialog.resx">
+      <DependentUpon>AddEditLED7DisplayOutputSetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDialog.resx">
+      <DependentUpon>TestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="mpusbapi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+    <None Include="kopiuj.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SkalarkiIO.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomowyPanelSDK\HomeSimCockpitSDK.csproj">
+      <Project>{DE369161-CA79-4C0D-BD34-2CA4D1925182}</Project>
+      <Name>HomeSimCockpitSDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigurationDialog.resx">
+      <DependentUpon>ConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)kopiuj.bat" "$(ProjectDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

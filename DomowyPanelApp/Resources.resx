@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Console" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="ProgramStart" xml:space="preserve">
+    <value>Application starting...</value>
+  </data>
+  <data name="StartMinimized" xml:space="preserve">
+    <value>Starting application in minimized mode...</value>
+  </data>
+  <data name="ProcessPriorityClassIdle" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="ProcessPriorityClassBelowNormal" xml:space="preserve">
+    <value>Below normal.</value>
+  </data>
+  <data name="ProcessPriorityClassAboveNormal" xml:space="preserve">
+    <value>Above normal.</value>
+  </data>
+  <data name="ProcessPriorityClassHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="ProcessPriorityClassRealTime" xml:space="preserve">
+    <value>Real time</value>
+  </data>
+  <data name="ProcessPriorityClassNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Processor" xml:space="preserve">
+    <value>Processor</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="ScriptStarted" xml:space="preserve">
+    <value>Script '{0}' started.</value>
+  </data>
+  <data name="ScriptStopped" xml:space="preserve">
+    <value>Script '{0}' stopped.</value>
+  </data>
+  <data name="ScriptExecutingError" xml:space="preserve">
+    <value>Error ocurred during executing script '{0}'.</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select file...</value>
+  </data>
+  <data name="ClearHistory" xml:space="preserve">
+    <value>Clear history</value>
+  </data>
+  <data name="HCPSFilesFilter" xml:space="preserve">
+    <value>Script file HCPS (*.hcps)|*.hcps</value>
+  </data>
+  <data name="LoadingScriptsFile" xml:space="preserve">
+    <value>Loading scripts from file '{0}'...</value>
+  </data>
+  <data name="NumberOfLoadedScripts" xml:space="preserve">
+    <value>Number of loaded scripts: {0}.</value>
+  </data>
+  <data name="LoadingFileError" xml:space="preserve">
+    <value>Error occured during loading scripts file.</value>
+  </data>
+  <data name="ScriptLogPrefix" xml:space="preserve">
+    <value>Script: {0}</value>
+  </data>
+  <data name="LoadingModules" xml:space="preserve">
+    <value>Loading modules...</value>
+  </data>
+  <data name="IgnoringInputModule" xml:space="preserve">
+    <value>	Omitting input module '{0}' (module already loaded).</value>
+  </data>
+  <data name="IgnoringOutputModule" xml:space="preserve">
+    <value>	Omitting output module '{0}' (module already loaded).</value>
+  </data>
+  <data name="InputModule" xml:space="preserve">
+    <value>	Input module : {0}</value>
+  </data>
+  <data name="OutputModule" xml:space="preserve">
+    <value>	Output module: {0}</value>
+  </data>
+  <data name="LoadingModulesError" xml:space="preserve">
+    <value>Error occured during loading input/output modules.</value>
+  </data>
+  <data name="NumberOfLoadedModules" xml:space="preserve">
+    <value>Modules loaded: {0}</value>
+  </data>
+  <data name="NumberOfInputModules" xml:space="preserve">
+    <value>	Input: {0}</value>
+  </data>
+  <data name="NumberOfOutputModules" xml:space="preserve">
+    <value>	Output: {0}</value>
+  </data>
+  <data name="NumberOfVariables" xml:space="preserve">
+    <value>Number of variables: {0}</value>
+  </data>
+  <data name="NumberOfInputVariables" xml:space="preserve">
+    <value>	Input: {0}</value>
+  </data>
+  <data name="NumberOfOutputVariables" xml:space="preserve">
+    <value>	Output: {0}</value>
+  </data>
+  <data name="ModuleVariables" xml:space="preserve">
+    <value>Module's variables:</value>
+  </data>
+  <data name="ModuleFunctions" xml:space="preserve">
+    <value>Module's functions:</value>
+  </data>
+  <data name="ImproprietyModuleNameForFunctions" xml:space="preserve">
+    <value>Any module that export functions, has to have a proper name (only letters and digits are allowed). Module '{0}' has improper name and any function of it can be used.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ModuleVariablesWithNumber" xml:space="preserve">
+    <value>Module's variables ({0}):</value>
+  </data>
+  <data name="ModuleFunctionsWithNumber" xml:space="preserve">
+    <value>Module's functions ({0}):</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ModuleNotFound" xml:space="preserve">
+    <value>Module '{0}' not found.</value>
+  </data>
+  <data name="VariableNotFoundInModuleVariables" xml:space="preserve">
+    <value>Variable of ID '{1}' not found in module '{0}'.</value>
+  </data>
+  <data name="IncorrectVariableTypeDeclared" xml:space="preserve">
+    <value>Declared variable '{0}' has declared different type ('{1}') then it has ('{2}') in module '{3}'.</value>
+  </data>
+  <data name="ModuleCannotProcessVariable" xml:space="preserve">
+    <value>Module '{0}' cannot process varialbe '{1}' of type '{2}'.</value>
+  </data>
+  <data name="DuplicatedVariable" xml:space="preserve">
+    <value>Variable of ID '{0}' already exists !.</value>
+  </data>
+  <data name="BeginExecuteScript" xml:space="preserve">
+    <value>Starting script '{0}'...</value>
+  </data>
+  <data name="ExecutingScript" xml:space="preserve">
+    <value>Running script: {0}</value>
+  </data>
+  <data name="ExecutingScriptThread" xml:space="preserve">
+    <value>Script thread started...</value>
+  </data>
+  <data name="EndingExecuteScript" xml:space="preserve">
+    <value>Stopping script...</value>
+  </data>
+  <data name="UnknownModule" xml:space="preserve">
+    <value>unknown module</value>
+  </data>
+  <data name="StopScriptBeforeCloseApplication" xml:space="preserve">
+    <value>Script has to be stopped before closing application.</value>
+  </data>
+  <data name="StopScript" xml:space="preserve">
+    <value>Stop '{0}'</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="LogFileFilters" xml:space="preserve">
+    <value>Text file TXT|*.txt|Any file|*.*</value>
+  </data>
+  <data name="RestartApplicationToChangeLanguage" xml:space="preserve">
+    <value>To apply language change application has to be restarted.</value>
+  </data>
+  <data name="CannotReadExpression" xml:space="preserve">
+    <value>Cannot parse expression at position '{0}'.</value>
+  </data>
+  <data name="CannotSetValueToExpression" xml:space="preserve">
+    <value>Cannot assign value to expression '{0}'.</value>
+  </data>
+  <data name="CyclicalVariableLinkingFound" xml:space="preserve">
+    <value>Cycled argument '{0}' linking found in function '{1}'.</value>
+  </data>
+  <data name="IncorrectFunctionDefinition" xml:space="preserve">
+    <value>Invalid definition of function at position {0}.</value>
+  </data>
+  <data name="CannotOverrideBuiltinFunction" xml:space="preserve">
+    <value>Cannot override built-in '{0}' function.</value>
+  </data>
+  <data name="IncorrectFunctionInvocation" xml:space="preserve">
+    <value>Invalid execute of funtcion statement at position {0}.</value>
+  </data>
+  <data name="IncorrectArgumentNumber" xml:space="preserve">
+    <value>Incorrect number of function '{0}' parameters, expected {1} parameters.</value>
+  </data>
+  <data name="FunctionNotFound" xml:space="preserve">
+    <value>Function '{0}' does not exist.</value>
+  </data>
+  <data name="IncorrectArgumentNumber2" xml:space="preserve">
+    <value>Incorrect number of function '{1}:{0}' paramateres, expected {2} parameters.</value>
+  </data>
+  <data name="FunctionNotFoundInModule" xml:space="preserve">
+    <value>Function '{1}' not found in module '{0}'.</value>
+  </data>
+  <data name="CannotConvertValueToType" xml:space="preserve">
+    <value>Cannot convert value '{0}' from '{1}' type to '{2}' type.</value>
+  </data>
+  <data name="ValueMustBeIntOrDouble" xml:space="preserve">
+    <value>Argument may be only of type 'double' or 'int'.</value>
+  </data>
+  <data name="FunctionArgumentMayBeOnlyVariable" xml:space="preserve">
+    <value>Only variable may be an argument of function '{0}'.</value>
+  </data>
+  <data name="WrongBitNumberForFunction" xml:space="preserve">
+    <value>Bit index in function '{0}' may be &gt;= 0.</value>
+  </data>
+  <data name="WrongGetNameFunctionArgument" xml:space="preserve">
+    <value>Argument for function 'GetName(...)' may be only variable or constant.</value>
+  </data>
+  <data name="WrongGetIDFunctionArgument" xml:space="preserve">
+    <value>Argument for function 'GetID(...)' may be only variable from input or output module.</value>
+  </data>
+  <data name="WrongGetSizeFunctionArgument" xml:space="preserve">
+    <value>Wrong argument type '{0}' for function 'GetSize(...)'.</value>
+  </data>
+  <data name="WrongArraySize" xml:space="preserve">
+    <value>Cannot create array of size '{0}', minimal size of array: 0.</value>
+  </data>
+  <data name="WrongSetSizeFunctionArgumentType" xml:space="preserve">
+    <value>Argument '{0}' for function 'SetSize(...)' is not of array type.</value>
+  </data>
+  <data name="ArgumentIsNotVariable" xml:space="preserve">
+    <value>Argument '{0}' of function '{1}' is not a variable.</value>
+  </data>
+  <data name="ArrayNotInitialized" xml:space="preserve">
+    <value>'{0}' array in '{1}' function is not initialized.</value>
+  </data>
+  <data name="UnsetValueInArray" xml:space="preserve">
+    <value>Not initialized value at index '{1}' in array '{0}'.</value>
+  </data>
+  <data name="UnsupportedValueTypeInArray" xml:space="preserve">
+    <value>Not supported type '{0}' at index '{2}' in array '{1}'.</value>
+  </data>
+  <data name="UnsupportedArrayType" xml:space="preserve">
+    <value>Not supported type '{0}' of array '{1}'.</value>
+  </data>
+  <data name="NoValueInArrayAtIndex" xml:space="preserve">
+    <value>No value at index '{0}' in array '{1}'.</value>
+  </data>
+  <data name="UnsetValueForArray" xml:space="preserve">
+    <value>Not initialized value for set at index '{1}' in array '{0}'.</value>
+  </data>
+  <data name="ArrayIndexOutOfBound" xml:space="preserve">
+    <value>Index from range '{0}' - '{1}' is out of '{2}' array boundary.</value>
+  </data>
+  <data name="InvalidTokenAfterModuleName" xml:space="preserve">
+    <value>Invalid token ('{0}') after module name ('{1}').</value>
+  </data>
+  <data name="OperationNotAllowed" xml:space="preserve">
+    <value>Operation is not allowed.</value>
+  </data>
+  <data name="CannotReadExpression2" xml:space="preserve">
+    <value>Cannot parse expression, token '{0}', value '{1}', position '{2}'.</value>
+  </data>
+  <data name="VariableOrConstantNotFound" xml:space="preserve">
+    <value>Variable or constant '{0}' not found.</value>
+  </data>
+  <data name="NoName" xml:space="preserve">
+    <value>no name</value>
+  </data>
+  <data name="Constant" xml:space="preserve">
+    <value>constant
+</value>
+  </data>
+  <data name="Variable" xml:space="preserve">
+    <value>variable</value>
+  </data>
+  <data name="IncorrectEventDefinition" xml:space="preserve">
+    <value>Incorrect definition of variable value changed event at position {0}.</value>
+  </data>
+  <data name="EventsAreAllowedOnlyForVariables" xml:space="preserve">
+    <value>Variable value changed event may be declared only for variables (found declaration for '{0}').</value>
+  </data>
+  <data name="IncorrectNumberForVariablesChangeEvent" xml:space="preserve">
+    <value>Invalid number format ('{0}') in declaration of variables values changed event.</value>
+  </data>
+  <data name="RepeatedVariableInVariablesChangeEvent" xml:space="preserve">
+    <value>Duplicated declaration of variable '{0}' within variables values changed event.</value>
+  </data>
+  <data name="VariablesChangeEventRequireAtLeastTwoVariables" xml:space="preserve">
+    <value>Variables values changed event require at least two variables.</value>
+  </data>
+  <data name="IncorrectVariablesChangeEventDefinition" xml:space="preserve">
+    <value>Invalid variable value change definition at position {0}.</value>
+  </data>
+  <data name="NotEnoughVariablesForVariablesChangeEvent" xml:space="preserve">
+    <value>Variables values changed event require at least two variables. Number of declared variables: {0}.</value>
+  </data>
+  <data name="IncorrectVariablesChangedMinimumForVariablesChangedEvent" xml:space="preserve">
+    <value>Invalid number of variables whithin variables values change event (number must be from range 0 - number of variables).</value>
+  </data>
+  <data name="CannotSetValueToInputVariable" xml:space="preserve">
+    <value>Cannot set value to input variable '{0}'.</value>
+  </data>
+  <data name="IncorrectValueTypeForVariable" xml:space="preserve">
+    <value>Value type ('{2}') does not match variable ('{0'} type ('{1}').</value>
+  </data>
+  <data name="IncorrectVariableDefinition" xml:space="preserve">
+    <value>Invalid variable '{0}' definition.</value>
+  </data>
+  <data name="InvalidVariableDefinitionProperty" xml:space="preserve">
+    <value>Invalid variable ('{1}') definition property '{0}' at position '{2}'.</value>
+  </data>
+  <data name="CannotParseVariableDefinition" xml:space="preserve">
+    <value>Cannot parse variable definition at position '{0}'.</value>
+  </data>
+  <data name="InvalidVariableDefinition" xml:space="preserve">
+    <value>Cannot parse variable deifinition at position '{0}'.</value>
+  </data>
+  <data name="IncorrectNumberOfVariablesForVariableFunction" xml:space="preserve">
+    <value>Function '{0}' for variable '{1}' accept '{2}' argyments. Function for variable may accept only one argument.</value>
+  </data>
+  <data name="UndefinedVariableDirection" xml:space="preserve">
+    <value>Undefined direction of variable '{0}'.</value>
+  </data>
+  <data name="IncorrectNumberFormatTypeIntForVariableInitialization" xml:space="preserve">
+    <value>Invalid number format of int type ('{0}') for variable '{1}'.</value>
+  </data>
+  <data name="IncorrectNumberFormatTypeDoubleForVariableInitialization" xml:space="preserve">
+    <value>Invalid number format of double type ('{0}') for variable '{1}'.</value>
+  </data>
+  <data name="CannotInitailizeVariableOfType" xml:space="preserve">
+    <value>Cannot initialize '{0}' variable of '{1}' type in its declaration.</value>
+  </data>
+  <data name="CannotCheckStatementForNullValue" xml:space="preserve">
+    <value>Cannot check '{0}' statement for null value.</value>
+  </data>
+  <data name="UnsupportedValueType" xml:space="preserve">
+    <value>Not supported type '{0}'.</value>
+  </data>
+  <data name="UnsupportedStatementTypeForArray" xml:space="preserve">
+    <value>Logic statement '{0}' is not supported for arrays.</value>
+  </data>
+  <data name="UnsupportedStatementTypeForValueType" xml:space="preserve">
+    <value>Condition operator '{0}' is not supported for type {1}.</value>
+  </data>
+  <data name="UnrecognizedStatementType" xml:space="preserve">
+    <value>Logic statement not found for token '{0}'.</value>
+  </data>
+  <data name="IncorrectElseStatementInIfStatementDefinition" xml:space="preserve">
+    <value>Invalid 'if' statement with 'else' statement at position {0}.</value>
+  </data>
+  <data name="IncorrectIfStatementDefinition" xml:space="preserve">
+    <value>Invalid 'if' statement declaration.</value>
+  </data>
+  <data name="ValueCanBeParsedOnlyFromString" xml:space="preserve">
+    <value>Parsing is allowed only for type 'string'.</value>
+  </data>
+  <data name="UnsupportedTypeParsing" xml:space="preserve">
+    <value>Parsing type '{0}' is not supported.</value>
+  </data>
+  <data name="IncorrectBoolValue" xml:space="preserve">
+    <value>Invalid valut '{0}' of bool type.</value>
+  </data>
+  <data name="UnsupportedDirectionType" xml:space="preserve">
+    <value>Not supported direction '{0}'.</value>
+  </data>
+  <data name="CannotChangeConstantValue" xml:space="preserve">
+    <value>Cannot change constant value.</value>
+  </data>
+  <data name="IncorrectConstantDefinition" xml:space="preserve">
+    <value>Invalid constant '{0}' definition.</value>
+  </data>
+  <data name="InvalidConstantType" xml:space="preserve">
+    <value>Invalid constant '{1}' type '{0}'.
+
+Warning! Constants may be only simple value type (bool, int, double, string).</value>
+  </data>
+  <data name="InvalidConstantDefinitionProperty" xml:space="preserve">
+    <value>Invalid property '{0}' of constantj '{1}' at position '{2}'.</value>
+  </data>
+  <data name="CannotParseConstantDefinition" xml:space="preserve">
+    <value>Cannot parse constant definition at positioni '{0}'.</value>
+  </data>
+  <data name="MissingConstantValue" xml:space="preserve">
+    <value>No value for constant '{0}'.</value>
+  </data>
+  <data name="IncorrectNumberFormatTypeIntForConstantInitialization" xml:space="preserve">
+    <value>Invalid number format of int type ('{0}') for constant '{1}'.</value>
+  </data>
+  <data name="IncorrectNumberFormatTypeDoubleForConstantInitialization" xml:space="preserve">
+    <value>Invalid number format of double type ('{0}') for constant '{1}'.</value>
+  </data>
+  <data name="InvalidConstantValueType" xml:space="preserve">
+    <value>Invalid value for constant '{0}'.
+
+Warning! Constants may be only simple value type (bool, int, double, string).</value>
+  </data>
+  <data name="UnsupportedScriptFileType" xml:space="preserve">
+    <value>Not supported scripts file format.</value>
+  </data>
+  <data name="VariableRedefinition" xml:space="preserve">
+    <value>Redefinition of variable of ID '{0}' from module '{1}'. Variable '{2}'.</value>
+  </data>
+  <data name="VariableRedefinition2" xml:space="preserve">
+    <value>Redefinition of variable of ID '{0}' from module '{1}'. Variable '{2}' at position '{3}'.</value>
+  </data>
+  <data name="ConstantRedefinition" xml:space="preserve">
+    <value>Redefinition of constatnt '{0}'.</value>
+  </data>
+  <data name="ConstantRedefinition2" xml:space="preserve">
+    <value>Redefinition of constant '{0}' at position '{1}'.</value>
+  </data>
+  <data name="UnsupportedEventType" xml:space="preserve">
+    <value>Unknown type of event '{0}'.</value>
+  </data>
+  <data name="VariableChangeEventRedefinition" xml:space="preserve">
+    <value>Redefinition of variable value change event for variable '{0}'.</value>
+  </data>
+  <data name="VariableChangeEventRedefinition2" xml:space="preserve">
+    <value>Redefinition of variable value change event for variable '{0}' at position '{1}'.</value>
+  </data>
+  <data name="VariablesChangedEventRedefinition" xml:space="preserve">
+    <value>Redefinition of variables values changed event (duplicated list of variables).</value>
+  </data>
+  <data name="VariablesChangedEventRedefinition2" xml:space="preserve">
+    <value>Redefinition of variables values changed event (duplicated list of variables) at position '{0}'.</value>
+  </data>
+  <data name="FunctionRedefinition" xml:space="preserve">
+    <value>Redefinition of function '{0}'.</value>
+  </data>
+  <data name="FunctionRedefinition2" xml:space="preserve">
+    <value>Redefinition of function '{0}' at position '{1}'.</value>
+  </data>
+  <data name="LoadingFile" xml:space="preserve">
+    <value>Loading file '{0}'...</value>
+  </data>
+  <data name="ScriptAlreadyExists" xml:space="preserve">
+    <value>Script '{0}' already exists in this file.</value>
+  </data>
+  <data name="LoadingScript" xml:space="preserve">
+    <value>Loading script '{0}'...</value>
+  </data>
+  <data name="LoadingScriptsFileCanceledByUser" xml:space="preserve">
+    <value>Loading scripts cancelled by user.</value>
+  </data>
+  <data name="SpecialEventRedefinition" xml:space="preserve">
+    <value>Special event '{0}' redefinition at position '{1}'.</value>
+  </data>
+  <data name="IncorrectSpecialEventDefinition" xml:space="preserve">
+    <value>Invalid special event '{0}' declaration at position '{1}'.</value>
+  </data>
+  <data name="UnsuportedDefinitionType" xml:space="preserve">
+    <value>Unknown definition word '{0}' at position '{1}'.</value>
+  </data>
+  <data name="ScriptSyntaxError" xml:space="preserve">
+    <value>Syntax error in script at position '{0}'.</value>
+  </data>
+  <data name="CannotJoinScriptsFromOneFile" xml:space="preserve">
+    <value>Cannot join scripts from one file.</value>
+  </data>
+  <data name="ScriptNotFoundInFile" xml:space="preserve">
+    <value>Script '{1}' not found in file '{0}'.</value>
+  </data>
+  <data name="UnrecognizedString" xml:space="preserve">
+    <value>Unknown string '{0}' at position '{0}'.</value>
+  </data>
+  <data name="UnsupportedOperator" xml:space="preserve">
+    <value>Not supported operator '{0}'.</value>
+  </data>
+  <data name="CannotAddValues" xml:space="preserve">
+    <value>Cannot add values of different types.</value>
+  </data>
+  <data name="CannotSubtractValues" xml:space="preserve">
+    <value>Cannot subtract values of different types.</value>
+  </data>
+  <data name="CannotMultiplyValues" xml:space="preserve">
+    <value>Cannot multiply given values.</value>
+  </data>
+  <data name="CannotDivideValues" xml:space="preserve">
+    <value>Cannot divide values of different types.</value>
+  </data>
+  <data name="CannotANDValues" xml:space="preserve">
+    <value>Cannot make bit AND operation (wrong values types).</value>
+  </data>
+  <data name="CannotORValues" xml:space="preserve">
+    <value>Cannot make bit OR operation (wrong values types).</value>
+  </data>
+  <data name="CannotMODValues" xml:space="preserve">
+    <value>Cannot do modulo divide with parameters: '{0}' of '{1}' type and '{2}' of '{3}' type.</value>
+  </data>
+  <data name="ExpressionNotFound" xml:space="preserve">
+    <value>Expression not found.</value>
+  </data>
+  <data name="IncorrectIncludeDefinition" xml:space="preserve">
+    <value>Invalid 'include' statement.</value>
+  </data>
+  <data name="InvalidIncludePropertyDefinition" xml:space="preserve">
+    <value>Invalid include property '{0}' of include statement at position '{1}'.</value>
+  </data>
+  <data name="MissingFileOrScriptPropertyInIncludeDefinition" xml:space="preserve">
+    <value>No property 'file' and/or 'script' within 'include' statement.</value>
+  </data>
+  <data name="CannotReadIncludeDefinition" xml:space="preserve">
+    <value>Cannot parse include statement at positon '{0}'.</value>
+  </data>
+  <data name="UnrecognizedCharacter" xml:space="preserve">
+    <value>Unknown character '{0}' at position {1}.</value>
+  </data>
+  <data name="CannotReadAssignmentDefinition" xml:space="preserve">
+    <value>Cannot parse assignment statement at position '{0}'.</value>
+  </data>
+  <data name="RowCharacter" xml:space="preserve">
+    <value>line {0}, character {1}</value>
+  </data>
+  <data name="UpdateError" xml:space="preserve">
+    <value>Error occured during updates checking.</value>
+  </data>
+  <data name="UpdateChecking" xml:space="preserve">
+    <value>Updates checking...</value>
+  </data>
+  <data name="NoUpdate" xml:space="preserve">
+    <value>No updates available.</value>
+  </data>
+  <data name="UpdateInfo" xml:space="preserve">
+    <value>Updates available! Start update application from Settings view.</value>
+  </data>
+  <data name="UpdateNow" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateQuestion" xml:space="preserve">
+    <value>Updates found. Do You want to start updating process ?</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+</root>

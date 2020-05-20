@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    
+    <devices>
+        <fcu name="fcu1" serialNumber="" />
+        <comNav name="com1" serialNumber="" />
+    <efis name="efis1" serialNumber="" />
+    </devices>
+
+</configuration>

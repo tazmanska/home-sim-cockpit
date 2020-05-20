@@ -1,0 +1,788 @@
+// skrypt Home Cockpit Panel Script
+
+// kolejnoœæ wczytywania pliku profilów
+// - wczytanie profilu
+// - wczytanie wszystkich zmiennych
+// - wczytanie wszystkich stalych
+// - wczytanie deklaracji funkcji
+// - wczytanie metod specjalnych (initialize itd.)
+// - wczytanie wszystkich zdarzeñ
+// - wczytanie wszystkich definicji funkcji
+// - wczytanie kolejnego profilu
+
+profile "Profil testowy"
+{
+
+	// Tekst na ca³ym wyœwietlaczu LCD1
+	variable $lcdText 
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:lcdText";
+		direct = out;
+		type = string;
+		value = "";
+	}
+
+	// zmienna przechowuj¹ca stan przycisku 1 w mjoyu
+	variable $przycisk1
+	{
+		direct = in;
+		module = "TestModule";
+		id = "form1:checkbox1";		
+		type = bool;
+		value = false;
+	}
+
+	// zmienna przechowuj¹ca stan diody 1 w matrycy LED
+	variable $dioda1
+	{
+		module = "TestModule";
+		id = "form2:checkbox1";
+		direct = Out;
+		type = bool;
+		value = false;
+	}
+
+	// zmienna przechowuj¹ca stan diody 2 w matrycy LED
+	variable $dioda2
+	{
+		module = "TestModule";
+		id = "form2:checkbox2";
+		direct = Out;
+		type = Bool;
+		value = False;
+	}
+
+	// zmienna przechowuj¹ca stan diody 3 w matrycy LED
+	variable $dioda3
+	{
+		module = "TestModule";
+		id = "form2:checkbox3";
+		direct = Out;
+		type = Bool;
+		value = False;
+	}
+
+	// zmienna przechowuj¹ca stan diody 4 w matrycy LED	
+	variable $dioda4
+	{
+		module = "TestModule";
+		id = "form2:checkbox4";
+		direct = Out;
+		type = Bool;
+		value = False;
+	}
+
+	// zmienna przechowuje informacjê o pozycji prze³¹cznika obrotowego
+	variable $pozycja_przelacznika_1
+	{
+		direct = None;
+		type = Int;
+		value = 0;
+	}
+
+	// zmienna przechowuj¹ca stan przycisku 2 w mjoyu
+	variable $przycisk2
+	{
+		module = "TestModule";
+		id = "form1:checkbox2";
+		direct = In;
+		type = Bool;
+		value = False;
+	}
+
+	// zmienna przechowuj¹ca stan przycisku 2 w mjoyu	
+	variable $numer1
+	{
+		module = "TestModule";
+		id = "form1:liczba1int";
+		direct = In;
+		type = Int;
+		value = 0;
+	}
+
+	// zmienna przechowuj¹ca stan przycisku 2 w mjoyu
+	variable $numer2
+	{
+		module = "TestModule";
+		id = "form2:liczba1int";
+		direct = Out;
+		type = Int;
+		value = 0;
+	}
+
+	// napis na wyœwietlaczu w miejscu COM1
+	variable $r1a
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:com1a";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu w miejscu COM1
+	variable $r1s
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:com1s";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu w miejscu COM2
+	variable $r2a
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:com2a";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu w miejscu COM2
+	variable $r2s
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:com2s";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// Etykiety radia COM
+	variable $radioLabel
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:radioLabel";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu o stanie goleni
+	variable $gearLabel
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:gearLabel";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu o stanie goleni przedniej
+	variable $gearCenterLabel
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:gearNose";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu o stanie goleni lewej
+	variable $gearLeftLabel
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:gearLeft";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// napis na wyœwietlaczu o stanie goleni prawej
+	variable $gearRightLabel
+	{
+		module = "RS232HCDevices";
+		id = "LCD1:gearRight";
+		direct = Out;
+		type = String;
+		value = "";
+	}
+
+	// COM1 active
+	variable $com1active
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// COM1 standby
+	variable $com1standby
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// COM2 active
+	variable $com2active
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// COM2 standby
+	variable $com2standby
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// NAV1 active
+	variable $nav1active
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// NAV1 standby
+	variable $nav1standby
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// NAV2 active
+	variable $nav2active
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// NAV2 standby
+	variable $nav2standby
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// Po³o¿enie goleni przedniej
+	variable $gearCenterInfo
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// Po³o¿enie goleni lewej
+	variable $gearLeftInfo
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// Po³o¿enie goleni prawej
+	variable $gearRightInfo
+	{
+		direct = None;
+		type = String;
+		value = "";
+	}
+
+	// przechowuje aktywn¹ czêstotliwoœæ COM1
+	variable $com1a
+	{
+		module = "FSXDataInput";
+		id = "com1activefrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje nieaktywn¹ czêstotliwoœæ COM1
+	variable $com1s
+	{
+		module = "FSXDataInput";
+		id = "com1standbyfrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje aktywn¹ czêstotliwoœæ COM2
+	variable $com2a
+	{
+		module = "FSXDataInput";
+		id = "com2activefrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje nieaktywn¹ czêstotliwoœæ COM2
+	variable $com2s
+	{
+		module = "FSXDataInput";
+		id = "com2standbyfrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje aktywn¹ czêstotliwoœæ NAV1
+	variable $nav1a
+	{
+		module = "FSXDataInput";
+		id = "nav1activefrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje nieaktywn¹ czêstotliwoœæ NAV1
+	variable $nav1s
+	{
+		module = "FSXDataInput";
+		id = "nav1standbyfrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje aktywn¹ czêstotliwoœæ NAV2
+	variable $nav2a
+	{
+		module = "FSXDataInput";
+		id = "nav2activefrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// przechowuje nieaktywn¹ czêstotliwoœæ NAV2
+	variable $nav2s
+	{
+		module = "FSXDataInput";
+		id = "nav2standbyfrequency";
+		direct = In;
+		type = Double;
+		value = 0;
+	}
+
+	// pozycja przedniego golenia
+	variable $gearCenter
+	{
+		module = "FSXDataInput";
+		id = "gearCenterPosition";
+		direct = In;
+		type = Int;
+		value = 1000;
+	}
+
+	// pozycja lewego golenia
+	variable $gearLeft
+	{
+		module = "FSXDataInput";
+		id = "gearLeftPosition";
+		direct = In;
+		type = Int;
+		value = 1000;
+	}
+
+	// pozycja prawego golenia
+	variable $gearRight
+	{
+		module = "FSXDataInput";
+		id = "gearRightPosition";
+		direct = In;
+		type = Int;
+		value = 1000;
+	}
+
+	// tryb wyœwietlania danych na LCD1
+	variable $trybLCD1
+	{
+		direct = none;
+		type = int;
+		value = 0;
+	}
+	
+	// dodatkowa zmienna
+	variable $zmienna3
+	{
+		direct = none;
+		type = int;
+		value = 0;
+	}
+	
+	// dodatkowa zmienna
+	variable $zmienna2
+	{
+		direct = none;
+		type = int;
+		value = 0;
+	}
+
+	// przyk³adowa sta³a
+	const $STALA_1
+	{
+		type = bool;
+		value = false;
+	}
+	
+	// kolejnoœæ przetwarzania
+	// initialize -> output_started -> input_started -> (kolejka zdarzeñ) -> input_stopped -> output_stopped -> uninitialize
+	
+	initialize
+	{
+		// operacje wykonywane przed uruchomieniem modu³ów wejœcia-wyjœcia
+	}
+	
+	output_started
+	{
+		// operacje wykonywane po uruchomieniu modu³ów wyjœcia ale przed uruchomieniem modu³ów wejœcia (brak zdarzeñ)
+	}
+	
+	output_stopped
+	{
+		// operacje wykonywane po zatrzymaniu modu³ów wyjœcia
+	}
+	
+	input_started
+	{
+		// operacje wykonywane po uruchomieniu modu³ów wejœcia ale przed rozpoczêciem przetwarzania zdarzeñ (mog¹ ju¿ byæ w kolejce)
+	}
+	
+	input_stopped
+	{
+		// operacje wykonywane po zatrzymaniu modu³ów wejœcia
+	}
+	
+	uninitialize
+	{
+		// operacje wykonywane po zatrzymaniu modu³ów wejœcia-wyjœcia
+	}
+	
+	function Cos()
+	{
+	}
+	
+	function wyswietlDane()
+	{	
+		if ( $trybLCD1 == 0 )
+		{
+			$radioLabel = "c1  c2  " ;
+			$r1a = $com1active ;
+			$r1s = $com1standby ;
+			$r2a = $com2active ;
+			$r2s = $com2standby ;			
+		}
+		else
+		{
+			if ( $trybLCD1 == 1 )
+			{
+				$radioLabel = "n1  n2  " ;
+				$r1a = $nav1active ;
+				$r1s = $nav1standby ;
+				$r2a = $nav2active ;
+				$r2s = $nav2standby ;	
+			}
+			else
+			{
+				if ( $trybLCD1 == 2 )
+				{
+					$gearLabel = "GEAR Nose:   L:  R: " ;
+					$gearCenterLabel = $gearCenterInfo ;
+					$gearLeftLabel = $gearLeftInfo ;
+					$gearRightLabel = $gearRightInfo ;					
+				}
+				else
+				{
+					$lcdText = "~!@#$%^&*()_+{}|:\"[]\;',./<>?" ;
+				}
+			}
+		}
+		return null ;
+	}	
+	
+	variable_changed $przycisk1
+	{
+		if ( $trybLCD1 >= 3 )
+		{
+			$trybLCD1 = 0 ;
+		}
+		else
+		{
+			$trybLCD1 = $trybLCD1 + 1 ;
+		}
+		$r1a = null ;
+		$r1s = null ;
+		$r2a = null ;
+		$r2s = null ;
+		$lcdText = null ;
+		$radioLabel = null ;
+		$gearCenterLabel = null ;
+		$gearLeftLabel = null ;
+		$gearRightLabel = null ;
+		$gearLabel = null ;
+		wyswietlDane() ;
+	}
+	
+	variable_changed $przycisk2
+	{
+		$dioda3 = $przycisk2 ;
+		$dioda4 = $przycisk2 ;
+	}
+	
+	variable_changed $numer1
+	{
+		$numer2 = $numer1 ;
+	}
+	
+	variable_changed $com1a
+	{
+		$com1active = StringReplace( FormatNumber( $com1a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $com1s
+	{
+		$com1standby = StringReplace( FormatNumber( $com1s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $com2a
+	{
+		$com2active = StringReplace( FormatNumber( $com2a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $com2s
+	{
+		$com2standby = StringReplace( FormatNumber( $com2s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 0 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav1a
+	{
+		$nav1active = StringReplace( FormatNumber( $nav1a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav1s
+	{
+		$nav1standby = StringReplace( FormatNumber( $nav1s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav2a
+	{
+		$nav2active = StringReplace( FormatNumber( $nav2a, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $nav2s
+	{
+		$nav2standby = StringReplace( FormatNumber( $nav2s, "000.00" ), ",", "." ) ;
+		if ( $trybLCD1 == 1 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $gearCenter
+	{
+		if ( $gearCenter == 0 )
+		{
+			$gearCenterInfo = "UP" ;
+		}
+		else
+		{
+			if ( $gearCenter == 100 )
+			{
+				$gearCenterInfo = "DOWN" ;
+			}
+			else
+			{
+				$gearCenterInfo = "MOVE" ;
+			}
+		}
+		if ( $trybLCD1 == 2 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $gearLeft
+	{
+		if ( $gearLeft == 0 )
+		{
+			$gearLeftInfo = "UP" ;
+		}
+		else
+		{
+			if ( $gearLeft == 100 )
+			{
+				$gearLeftInfo = "DOWN" ;
+			}
+			else
+			{
+				$gearLeftInfo = "MOVE" ;
+			}
+		}
+		if ( $trybLCD1 == 2 )
+		{
+			wyswietlDane() ;
+		}
+	}
+	
+	variable_changed $gearRight
+	{
+		if ( $gearRight == 0 )
+		{
+			$gearRightInfo = "UP" ;
+		}
+		else
+		{
+			if ( $gearRight == 100 )
+			{
+				$gearRightInfo = "DOWN" ;
+			}
+			else
+			{
+				$gearRightInfo = "MOVE" ;
+			}
+		}
+		if ( $trybLCD1 == 2 )
+		{
+			wyswietlDane() ;
+		}
+	}
+} 
+profile "Profil testowy 2"
+{
+	// zmienna przechowuj¹ca stan przycisku 1 w mjoyu
+	variable $przycisk1
+	{
+		direct = in;
+		module = "TestModule";
+		id = "form1:checkbox1";		
+		type = bool;
+		value = false;
+	}
+	
+	variable $przycisk2
+	{
+		direct = in;
+		module = "TestModule";
+		id = "form1:checkbox2";		
+		type = bool;
+		value = false;
+	}
+
+	// zmienna przechowuj¹ca stan przycisku 2 w mjoyu
+	variable $numer
+	{
+		module = "TestModule";
+		id = "form2:liczba1int";
+		direct = Out;
+		type = Int;
+		value = 0;
+	}
+	
+	// zmienna przechowuj¹ca stan przycisku 2 w mjoyu
+	variable $numer2
+	{
+		module = "TestModule";
+		id = "form2:liczba2int";
+		direct = Out;
+		type = Int;
+		value = 0;
+	}
+	
+	variable $tekst1
+	{
+		module = "TestModule";
+		id = "form2:string1";
+		direct = out;
+		type = string;
+		value = "";
+	}
+	
+	variable $double1
+	{
+		module = "TestModule";
+		id = "form1:liczba1double";
+		direct = in;
+		type = double;
+		value = 0;
+	}
+	
+	variable_changed $double1
+	{
+		$tekst1 = FormatNumber($double1, "00000.00000");
+	}
+	
+	variable $text1
+	{
+		direct = none;
+		type = string;
+		value = "";
+	}
+	
+	variable $prawda
+	{
+		direct = none;
+		type = bool;
+		value = false;
+	}
+	
+	function _FormatNumber( $numer , $string )
+	{
+		$string = ToString( $numer ) ;
+	}
+	
+	function ZwiekszNumer( $jakisNumer , $ile )
+	{
+		$jakisNumer = $jakisNumer + $ile ;
+	}
+	
+	function ZmniejszNumer( $jakisNumer )
+	{
+		$jakisNumer = $jakisNumer - 1;
+	}
+	
+	variable_changed $przycisk1
+	{
+		
+		if ( $prawda )
+		{
+			ZwiekszNumer( $numer , 100 * 2 ) ;
+		}
+		else
+		{
+			ZwiekszNumer( $numer2 , 50 * 3 );
+		}
+	}
+}

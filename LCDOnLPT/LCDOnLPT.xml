@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <lpt address="378" />
+    <lcds>
+      <lcd1>
+        <lcd seq="LCD1" enabled="True" multiplier="1" id="LCD1" rows="2" columns="16" description="Wyświetlacz 1" />
+      </lcd1>
+      <lcd2>
+        <lcd seq="LCD2" enabled="True" multiplier="1" id="LCD2" rows="2" columns="16" description="Wyświetlacz 2" />
+      </lcd2>
+    </lcds>
+    <areas>
+    </areas>
+</configuration>

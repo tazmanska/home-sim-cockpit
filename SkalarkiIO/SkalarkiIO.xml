@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<devices>
+	</devices>
+    
+	<digitalOutputs>
+	</digitalOutputs>
+    
+	<digitalInputs>
+	</digitalInputs>
+    
+    <encoders>
+    </encoders>
+    
+	<displays7LED>
+	</displays7LED>
+    
+	<displays7LEDDictionary default="1" dot="128">
+		<dotChars>
+			<char chr="." />
+			<char chr="," />
+		</dotChars>
+	    <char chr=" " value="0" />
+		<char chr="0" value="126" />
+		<char chr="1" value="48" />
+		<char chr="2" value="109" />
+		<char chr="3" value="121" />
+		<char chr="4" value="51" />
+		<char chr="5" value="91" />
+		<char chr="6" value="95" />
+		<char chr="7" value="112" />
+		<char chr="8" value="127" />
+		<char chr="9" value="123" />
+	</displays7LEDDictionary>
+
+</configuration>

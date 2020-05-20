@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{517B3271-D944-4FCF-90B8-EC0464E9C23C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RS232HCDevices</RootNamespace>
+    <AssemblyName>simOUT</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Tomek\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\DomowyPanelApp\bin\Debug\modules\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\DomowyPanelApp\bin\Release\modules\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEdit7LEDDisplayGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEdit7LEDDisplayGroupDialog.Designer.cs">
+      <DependentUpon>AddEdit7LEDDisplayGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEncoderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEncoderDialog.Designer.cs">
+      <DependentUpon>AddEditEncoderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditInterfaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditInterfaceDialog.Designer.cs">
+      <DependentUpon>AddEditInterfaceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditKeyDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditKeyDevice.Designer.cs">
+      <DependentUpon>AddEditKeyDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditLCDDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditLCDDevice.Designer.cs">
+      <DependentUpon>AddEditLCDDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditLCDArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditLCDArea.Designer.cs">
+      <DependentUpon>AddEditLCDArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditLEDDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditLEDDevice.Designer.cs">
+      <DependentUpon>AddEditLEDDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditLEDDisplayDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditLEDDisplayDeviceDialog.Designer.cs">
+      <DependentUpon>AddEditLEDDisplayDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditLEDGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditLEDGroupDialog.Designer.cs">
+      <DependentUpon>AddEditLEDGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrightnessVariable.cs" />
+    <Compile Include="ConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationDialog.Designer.cs">
+      <DependentUpon>ConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device.cs" />
+    <Compile Include="DeviceReportsReceiver.cs" />
+    <Compile Include="Encoder.cs" />
+    <Compile Include="EncoderType.cs" />
+    <Compile Include="IDeviceBrightness.cs" />
+    <Compile Include="IInputVariable.cs" />
+    <Compile Include="IOutputVariable.cs" />
+    <Compile Include="IRSReceiver.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="KeysDevice.cs" />
+    <Compile Include="LCDClearCommandVariable.cs" />
+    <Compile Include="LCDDevice.cs" />
+    <Compile Include="LCDMode.cs" />
+    <Compile Include="LCDOnOffCommandVariable.cs" />
+    <Compile Include="LED.cs" />
+    <Compile Include="LEDDevice.cs" />
+    <Compile Include="LEDDisplay.cs" />
+    <Compile Include="LEDDisplayDevice.cs" />
+    <Compile Include="LEDDisplayGroup.cs" />
+    <Compile Include="LEDDisplayInGroup.cs" />
+    <Compile Include="LEDDisplaysDictionary.cs" />
+    <Compile Include="LEDGroup.cs" />
+    <Compile Include="NumericColumn.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RS232LCD.cs" />
+    <Compile Include="RS232LCDArea.cs" />
+    <Compile Include="RS232LCDCharacter.cs" />
+    <Compile Include="Servos\AddEditServoDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servos\AddEditServoDevice.Designer.cs">
+      <DependentUpon>AddEditServoDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servos\Servo.cs" />
+    <Compile Include="Servos\ServoDevice.cs" />
+    <Compile Include="simINDevice.cs" />
+    <Compile Include="simINDevices.cs" />
+    <Compile Include="simINModule.cs" />
+    <Compile Include="Steppers\AddEditStepperDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Steppers\AddEditStepperDevice.Designer.cs">
+      <DependentUpon>AddEditStepperDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Steppers\SimpleStepperDevice.cs" />
+    <Compile Include="Steppers\StepDirection.cs" />
+    <Compile Include="Steppers\StepperDevice.cs" />
+    <Compile Include="Steppers\StepperDeviceType.cs" />
+    <Compile Include="Steppers\StepperMotor.cs" />
+    <Compile Include="Steppers\StepType.cs" />
+    <Compile Include="TestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDialog.Designer.cs">
+      <DependentUpon>TestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XMLConfiguration.cs" />
+    <Compile Include="DeviceVariable.cs" />
+    <Compile Include="IDevice.cs" />
+    <Compile Include="LCDOutputVariable.cs" />
+    <Compile Include="RS232Configuration.cs" />
+    <Compile Include="RS232HCDevices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddEditEncoderDialog.resx">
+      <DependentUpon>AddEditEncoderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditInterfaceDialog.resx">
+      <DependentUpon>AddEditInterfaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditKeyDevice.resx">
+      <DependentUpon>AddEditKeyDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditLEDDevice.resx">
+      <DependentUpon>AddEditLEDDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditLEDDisplayDeviceDialog.resx">
+      <DependentUpon>AddEditLEDDisplayDeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditLEDGroupDialog.resx">
+      <DependentUpon>AddEditLEDGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationDialog.resx">
+      <DependentUpon>ConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servos\AddEditServoDevice.resx">
+      <DependentUpon>AddEditServoDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Steppers\AddEditStepperDevice.resx">
+      <DependentUpon>AddEditStepperDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDialog.resx">
+      <DependentUpon>TestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dokumentacja\Urządzenia.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomowyPanelSDK\HomeSimCockpitSDK.csproj">
+      <Project>{DE369161-CA79-4C0D-BD34-2CA4D1925182}</Project>
+      <Name>HomeSimCockpitSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeCockpitX\HomeSimCockpitX.csproj">
+      <Project>{99698200-ED0F-42F0-9FF0-531900F6C61B}</Project>
+      <Name>HomeSimCockpitX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="info.txt" />
+    <Content Include="simOUT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddEditLCDDevice.resx">
+      <DependentUpon>AddEditLCDDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditLCDArea.resx">
+      <DependentUpon>AddEditLCDArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

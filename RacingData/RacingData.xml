@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <settings>
+    
+    <server ip="127.0.0.1" port="9090" password="" />
+    <client port="9091" />
+    
+  </settings>
+</configuration>

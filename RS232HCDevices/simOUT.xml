@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    
+    <interfaces>
+    </interfaces>    
+
+    <lcdDevices>
+    </lcdDevices>
+    
+    <lcds>
+    </lcds> 
+    
+    <lcdAreas>
+    </lcdAreas>
+    
+    <ledDevices>
+    </ledDevices>
+    
+    <leds>
+    </leds>    
+
+    <ledDisplayDevices>
+    </ledDisplayDevices>
+    
+    <ledDisplays>
+    </ledDisplays>
+    
+    <ledDisplaysDictionary default="0" dot="1">
+        <dotChars>
+            <char chr="." />
+            <char chr="," />
+        </dotChars>
+        <char chr=" " value="0" />
+        <char chr="0" value="252" />
+        <char chr="1" value="96" />
+        <char chr="2" value="218" />
+        <char chr="3" value="242" />
+        <char chr="4" value="102" />
+        <char chr="5" value="182" />
+        <char chr="6" value="190" />
+        <char chr="7" value="224" />
+        <char chr="8" value="254" />
+        <char chr="9" value="246" />
+    </ledDisplaysDictionary>
+
+    <keysDevices>
+        <keysDevice interface="" id="" description="" device="" keysCount="" />
+    </keysDevices>
+
+    <keys>
+        <key keysDevice="" id="" description="" index="" />
+    </keys>
+
+    <encoders>
+        <encoder keysDevice="" description="" index="" />
+    </encoders>
+
+    <stepperDevices>
+<!--        <stepperDevice interface="" id="" description="" device="" type="">
+            <motor1 id="" description="" stepsFor360="" minStepInterval="" lastPosition="" lastStepDirection="" lastStepType="" lastStepIndex=""
+                    zeroSpeed="" zeroDirection="" zeroStepType="" keepTourque="" hasZeroSensor="" invertZeroSensor="" reverseDirection="" />
+            <motor2 />
+        </stepperDevice>-->
+    </stepperDevices>
+
+</configuration>

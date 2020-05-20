@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <input>
+       <!--
+
+<rss id="tvn24" description="kanał RSS tvn24.pl" address="http://www.nowiny24.pl/rzeszow.xml" interval="1" />    
+    -->
+        <rss id="tvn24" description="kanał RSS tvn24.pl" address="http://www.tvn24.pl/najwazniejsze.xml" interval="1" oneString="True" />
+  </input>
+</configuration>
